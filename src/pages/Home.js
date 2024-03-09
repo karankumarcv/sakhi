@@ -1,11 +1,9 @@
-import "./styles/App.css";
+import "../styles/App.css";
 import { FiDroplet } from "react-icons/fi";
 import { LuTornado } from "react-icons/lu";
 import { TbTopologyStar } from "react-icons/tb";
-import { RiDropFill } from "react-icons/ri";
-import SakhiIcon from "./assets/girl-3.svg";
-import { IoChatbubbleEllipsesSharp } from "react-icons/io5";
-function App() {
+import Navbar from "../components/Navbar";
+function Home() {
   return (
     <div className="App">
       <section className="App-header">
@@ -85,7 +83,7 @@ function App() {
         <div className="data-input-item-body">
           <div className="data-input-button-image">
             <span>
-            <FiDroplet />
+              <FiDroplet />
             </span>
             <span className="data-input-button-image-add">+</span>
           </div>
@@ -103,31 +101,16 @@ function App() {
         <div className="data-input-item-body">
           <div className="data-input-button-image">
             <span>
-            <TbTopologyStar />
+              <TbTopologyStar />
             </span>
             <span className="data-input-button-image-add">+</span>
           </div>
           <div className="data-input-button-title">Pain</div>
         </div>
       </section>
-      <footer>
-        <div className="footer-item">
-          <div className="footer-item-image"><RiDropFill /></div>
-          <div className="footer-item-title">My Periods</div>
-        </div>
-        <div className="footer-item">
-          <div className="footer-item-image">
-            <img src={SakhiIcon} alt="Ask Sakhi"/>
-          </div>
-          <div className="footer-item-title">Ask Sakhi</div>
-        </div>
-        <div className="footer-item">
-          <div className="footer-item-image"><IoChatbubbleEllipsesSharp /></div>
-          <div className="footer-item-title">Community</div>
-        </div>
-      </footer>
+      <Navbar/>
     </div>
   );
 }
 
-export default App;
+export default Home;
