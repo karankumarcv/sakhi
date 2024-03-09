@@ -3,17 +3,15 @@ import { FiDroplet } from "react-icons/fi";
 import { LuTornado } from "react-icons/lu";
 import { TbTopologyStar } from "react-icons/tb";
 import Navbar from "../components/Navbar";
+import Switch from "../components/Switch";
+import { FaCaretDown } from "react-icons/fa";
+import { FaCaretLeft } from "react-icons/fa";
+import { FaCaretRight } from "react-icons/fa";
 function Home() {
   return (
     <div className="App">
-      <section className="App-header">
-        {/* Switch */}
-
-        <div className="switchBody">
-          <div className="switchItem active">Track</div>
-          <div className="switchItem">Analyse</div>
-        </div>
-      </section>
+      {/* Switch */}
+      <Switch item1="Track" item2="Analyse" />
 
       {/* Period Dealy View */}
       <section className="delay-body">
@@ -25,11 +23,19 @@ function Home() {
       <section className="cal">
         <div className="cal-controllers">
           <div className="month-name">
-            February <span className="down-arrow">{">"}</span>
+            February&nbsp;
+            <span className="down-arrow">
+              <FaCaretDown />
+            </span>
           </div>
           <div className="slide-control">
-            <div className="left-slide">{"<"}</div>
-            <div className="right-slide">{">"}</div>
+            <div className="left-slide">
+              <FaCaretLeft />
+            </div>
+            &ensp;
+            <div className="right-slide">
+              <FaCaretRight />
+            </div>
           </div>
         </div>
         <div className="cal-days">
@@ -108,7 +114,7 @@ function Home() {
           <div className="data-input-button-title">Pain</div>
         </div>
       </section>
-      <Navbar/>
+      <Navbar />
     </div>
   );
 }

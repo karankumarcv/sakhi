@@ -1,21 +1,17 @@
-import "./styles/App.css";
+import "../styles/App.css";
 import { FiDroplet } from "react-icons/fi";
 import { LuTornado } from "react-icons/lu";
 import { TbTopologyStar } from "react-icons/tb";
-import { RiDropFill } from "react-icons/ri";
-import SakhiIcon from "./assets/girl-3.svg";
-import { IoChatbubbleEllipsesSharp } from "react-icons/io5";
-function App() {
+import Navbar from "../components/Navbar";
+import Switch from "../components/Switch";
+import { FaCaretDown } from "react-icons/fa";
+import { FaCaretLeft } from "react-icons/fa";
+import { FaCaretRight } from "react-icons/fa";
+function Analyse() {
   return (
     <div className="App">
-      <section className="App-header">
-        {/* Switch */}
-
-        <div className="switchBody">
-          <div className="switchItem active">Track</div>
-          <div className="switchItem">Analyse</div>
-        </div>
-      </section>
+      {/* Switch */}
+      <Switch item1="Track" item2="Analyse" />
 
       {/* Period Dealy View */}
       <section className="delay-body">
@@ -27,11 +23,14 @@ function App() {
       <section className="cal">
         <div className="cal-controllers">
           <div className="month-name">
-            February <span className="down-arrow">{">"}</span>
+            February&nbsp;
+            <span className="down-arrow">
+              <FaCaretDown />
+            </span>
           </div>
           <div className="slide-control">
-            <div className="left-slide">{"<"}</div>
-            <div className="right-slide">{">"}</div>
+            <div className="left-slide"><FaCaretLeft /></div>&ensp;
+            <div className="right-slide"><FaCaretRight /></div>
           </div>
         </div>
         <div className="cal-days">
@@ -85,7 +84,7 @@ function App() {
         <div className="data-input-item-body">
           <div className="data-input-button-image">
             <span>
-            <FiDroplet />
+              <FiDroplet />
             </span>
             <span className="data-input-button-image-add">+</span>
           </div>
@@ -103,31 +102,16 @@ function App() {
         <div className="data-input-item-body">
           <div className="data-input-button-image">
             <span>
-            <TbTopologyStar />
+              <TbTopologyStar />
             </span>
             <span className="data-input-button-image-add">+</span>
           </div>
           <div className="data-input-button-title">Pain</div>
         </div>
       </section>
-      <footer>
-        <div className="footer-item">
-          <div className="footer-item-image"><RiDropFill /></div>
-          <div className="footer-item-title">My Periods</div>
-        </div>
-        <div className="footer-item">
-          <div className="footer-item-image">
-            <img src={SakhiIcon} alt="Ask Sakhi"/>
-          </div>
-          <div className="footer-item-title">Ask Sakhi</div>
-        </div>
-        <div className="footer-item">
-          <div className="footer-item-image"><IoChatbubbleEllipsesSharp /></div>
-          <div className="footer-item-title">Community</div>
-        </div>
-      </footer>
+      <Navbar />
     </div>
   );
 }
 
-export default App;
+export default Analyse;

@@ -10,7 +10,7 @@ function Navbar() {
     const [isActive, setIsActive] = useState(false);
 
     const handleClick=()=>{
-        setIsActive(!isActive);
+        setIsActive(!isActive); // toggle the isActive
     }
 
 
@@ -18,19 +18,19 @@ function Navbar() {
 
   return (
     <section className="nav-section">
-      <NavLink className={isActive ? "nav-item-active": "nav-item"} to="/" onclick={handleClick}>
+      <NavLink className={isActive ? "nav-item active": "nav-item"} to="/" onClick={handleClick}>
         <div className="nav-item-image">
           <RiDropFill />
         </div>
         <div className="nav-item-title">My Periods</div>
       </NavLink>
-      <NavLink className={isActive ? "nav-item-active": "nav-item"} to="/sakhi" onclick={handleClick}>
+      <NavLink className={isActive ? "nav-item-active": "nav-item"} to="/sakhi" onClick={handleClick}>
         <div className="nav-item-image">
           <img src={SakhiIcon} alt="Ask Sakhi" />
         </div>
         <div className="nav-item-title">Ask Sakhi</div>
       </NavLink>
-      <NavLink className={isActive ? "nav-item-active": "nav-item"} to="/community" onclick={handleClick}>
+      <NavLink className={isActive ? "nav-item-active": "nav-item"} to="/community" onClick={handleClick}>
         <div className="nav-item-image">
           <IoChatbubbleEllipsesSharp />
         </div>

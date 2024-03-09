@@ -3,11 +3,11 @@ import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./styles/index.css";
 import "./styles/App.css";
-
 import Home from "./pages/Home";
 import Community from "./pages/Community";
 import Friends from "./pages/Friends";
 import Sakhi from "./pages/Sakhi";
+import Analyse from "./pages/Analyse";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -18,9 +18,14 @@ const router = createBrowserRouter([
     ),
   },
   {
+    path: "/Track",
+    element: <Home />,
+  },
+  {
     path: "/community",
     element: <Community />,
   },
+  
   {
     path: "/friends",
     element: <Friends />,
@@ -28,6 +33,10 @@ const router = createBrowserRouter([
   {
     path: "/sakhi",
     element: <Sakhi />,
+  },
+  {
+    path: "/Analyse",
+    element: <Analyse />,
   },
 ]);
 

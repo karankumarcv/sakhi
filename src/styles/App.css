@@ -75,16 +75,27 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
   }
   .month-name {
-    font-size: 25px;
+    font-size: 22px;
     font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    padding-right: 10px;
+    
+  }
+  .month-name span{
+    line-height: 0.8;
   }
   .slide-control {
     display: flex;
     flex-direction: row;
     width: 15%;
-    font-size: 25px;
+    font-size: 22px;
+    line-height: 0.8;
+
     font-weight: 600;
     justify-content: space-between;
   }
@@ -172,7 +183,7 @@
     font-size: 12px;
     align-items: center;
   }
-  .nav-item-active{
+  .nav-item.active{
     color: var(--primary);
   }
   .nav-item-image {
